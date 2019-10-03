@@ -16,7 +16,7 @@
                     Congratulations you have successfully logged in. Good luck :)
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
 </div>
 @endsection
