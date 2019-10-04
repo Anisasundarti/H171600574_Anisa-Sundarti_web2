@@ -82,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    WEB SUNDARTI
+                -LARAVEL SUNDARTI-
                 </div>
 
                 <div class="links">
