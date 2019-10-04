@@ -16,7 +16,7 @@ class FixForeignKeyGaleri extends Migration
         Schema::table('galeri', function(Blueprint $table)
         {
             $table->dropForeign('fk_galeri_kategori_berita1');
-            $table->foreign('kategori_galeri_id', 'fk_galeri_kategori_galeri')->references('id')->on('kategori_galeri')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+            $table->foreign('kategori_galeri_id', 'fk_galeri_kategori_galeri')->references('id')->on('kategori_galeri')->onDelete('cascade');
         });
     }
 
