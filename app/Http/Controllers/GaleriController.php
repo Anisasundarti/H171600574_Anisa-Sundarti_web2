@@ -8,7 +8,7 @@ use App\KategoriGaleri;
 
 class GaleriController extends Controller
 {
-     function index(){
+    function index(){
         $galeri=galeri::all();
 
     return view('galeri.index',compact ('galeri'));
@@ -32,7 +32,9 @@ class GaleriController extends Controller
     {
         $input= $request->all();
         
-        Galeri::create($input);
+        galeri::create($input);
+
         return redirect(route('galeri.index'));
     }
+
 }

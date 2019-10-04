@@ -66,9 +66,9 @@ Route::post('/kategori_pengumuman','KategoriPengumumanController@store')->name('
 Route::get('/kategori_pengumuman/{id}', 'KategoriPengumumanController@show')->name('kategori_pengumuman.show');
 
 
-Route::get('/artikel  ', 'ArtikelController@index')->name('artikel.index');
+Route::get('/artikel', 'ArtikelController@index')->name('artikel.index');
 Route::get('/artikel/create', 'ArtikelController@create')->name('artikel.create');
-Route::post('/artikel', 'ArtikelController@store')->name('artikel.store');
+Route::post('/artikel','ArtikelController@store')->name('artikel.store');
 Route::get('/artikel/{id}', 'ArtikelController@show')->name('artikel.show');
 
 
