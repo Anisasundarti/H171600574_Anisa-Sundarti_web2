@@ -3,21 +3,22 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-white text-center bg-success">Tambah Berita</div>
-             <div class="card-body">   
-                {!! Form::open(['route' => 'berita.store', 'method' => 'post']) !!}
+                <div class="card-header text-white bg-success" button class="btn btn-success">Tambah Berita</div>
+          
+                <div class="card-body text-center">
+                    
+                    {!! Form::model($berita, ['route' => ['berita.update', $berita->id],'method'=>'patch']) !!}
                         
                         @include('berita.form')
                     
-                {!! Form::close() !!}
-            </div>
+                    {!! Form::close() !!}
+
+                </div>
             </div>
         </div>
-    </div>   
-</div>
-
+     </div>
 @endsection
 
 @section('scripts')
@@ -28,4 +29,3 @@
     });
     </script>
 @endsection
-

@@ -3,21 +3,22 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-white text-center bg-success">Tambah Galeri</div>
-             <div class="card-body">   
-                {!! Form::open(['route' => 'galeri.store', 'method' => 'post']) !!}
+                <div class="card-header text-white bg-success" button class="btn btn-success">Tambah Galeri</div>
+          
+                <div class="card-body text-center">
+                    
+                    {!! Form::model($galeri, ['route' => ['galeri.update', $galeri->id],'method'=>'patch']) !!}
                         
                         @include('galeri.form')
                     
-                {!! Form::close() !!}
-            </div>
+                    {!! Form::close() !!}
+
+                </div>
             </div>
         </div>
-    </div>   
-</div>
-
+     </div>
 @endsection
 
 @section('scripts')

@@ -5,10 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-white text-center bg-success" button class="btn btn-success">Tambah Kategori Pengumuman</div>
+                <div class="card-header text-white bg-success" button class="btn btn-success">Tambah Kategori Pengumuman</div>
           
-                <div class="card-body">
-                     {!! Form::open(['route' => 'kategori_pengumuman.store', 'method' => 'post']) !!}
+                <div class="card-body text-center">
+                    
+                    {!! Form::model($kategori_pengumuman, ['route' => ['kategori_pengumuman.update', $kategori_pengumuman->id],'method'=>'patch']) !!}
                         
                         @include('kategori_pengumuman.form')
                     

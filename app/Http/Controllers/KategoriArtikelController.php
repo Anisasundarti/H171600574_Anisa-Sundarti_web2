@@ -20,6 +20,11 @@ class KategoriArtikelController extends Controller
     
     	$kategori_artikel=KategoriArtikel::find($id);
 
+      if(empty($kategori_artikel))
+      {
+        return redirect(route('kategori_artikel.index'));
+      }
+
     	return view('kategori_artikel.show',compact( 'kategori_artikel'));
     }  
     
@@ -36,5 +41,51 @@ class KategoriArtikelController extends Controller
 
        	return redirect(route('kategori_artikel.index'));
     }   
+    
+    public function edit($id)
+    {
+      $kategori_artikel=KategoriArtikel::find($id);
 
+      if(empty($kategori_artikel))
+      {
+        return redirect(route('kategori_artikel.index'));
+      }
+
+      return view('kategori_artikel.edit',compact( 'kategori_artikel'));
+    }
+
+    public function update($id,Request $request)
+    {
+      $kategori_artikel=KategoriArtikel::find($id);
+      $input=$request->all();
+  
+      if(empty($kategori_artikel))
+      {
+        return redirect(route('kategori_artikel.index'));
+      }
+
+      $kategori_artikel->update($input);
+      return redirect(route('kategori_artikel.index'));
+    }
+    public function destroy($id)
+    {
+      $kategori_artikel=KategoriArtikel::find($id);
+
+      if(empty($kategori_artikel))
+      {
+        return redirect(route('kategori_artikel.index'));
+      }
+      $kategori_artikel->delete();
+      return redirect(route('kategori_artikel.index'));
+ }
+    public function trash(){
+      
+      $KategoriArtikel=KategoriArtikel::onlyTrashed();
+
+    return view('kategori_artikel.index',compact('KategoriArtikel'));
+        
+    }
+    
 }
+
+
