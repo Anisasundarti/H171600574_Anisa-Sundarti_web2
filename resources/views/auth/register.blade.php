@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center bg-info" button class="btn btn-primary">{{ __('Register') }}</div>
+                <div class="card-header text-white text-center bg-success" button class="btn btn-success">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -84,7 +84,7 @@
 
     <div class="captcha">
     <span>{!! captcha_img() !!}</span>
-    <button type="button" class="btn btn-success btn-refresh">Refresh</button>
+    <button type="button" class="btn btn-danger text-white btn-refresh">Refresh</button>
     </div>
     <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
     @if ($errors->has('captcha'))
@@ -95,20 +95,16 @@
     @endif
 </div>
 </div>
-
-
-
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="form-group row mb-0">
+    <div class="col-md-6 offset-md-4">
+       <button type="submit" class="btn btn-success">
+            {{ __('Register') }}
+        </button>
+        </div>
+        </div>
+        </form>
+           </div>
+           </div>
         </div>
     </div>
 </div>

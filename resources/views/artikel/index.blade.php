@@ -36,7 +36,9 @@
                             <td>
                             
                             <a href="{!! route('artikel.show',[$item->id]) !!}" button class="btn btn-sm btn-primary" type="button"> Lihat </a>
+
                             <a href="{!! route('artikel.edit',[$item-> id]) !!}" button class="btn btn-sm btn-secondary" type="button">Edit</a>
+                            
                             {!! Form::open(['route' => ['artikel.destroy', $item-> id],'method'=>'delete']) !!}
 
                                     {!! Form::submit( 'Hapus',['class'=>'btn btn-danger','onclick'=>"return confirm('Apakah Anda yakin Ingin Menghapus Data Ini?')"] ); !!}

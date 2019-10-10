@@ -6,25 +6,29 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white text-center bg-success">Tambah Artikel</div>
-             <div class="card-body">   
-                {!! Form::open(['route' => 'artikel.store', 'method' => 'post']) !!}
+                    <div class="card-body">   
+                         {!! Form::open(['route' => 'artikel.store', 'method' => 'post']) !!}
                         
                         @include('artikel.form')
                     
-                {!! Form::close() !!}
+                        {!! Form::close() !!}
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
-    </div>   
-</div>
+        </div>   
+    </div>
 
 @endsection
 
 @section('scripts')
     <script src="https://cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
-<script>
-    $( document ).ready(function() {
+    
+    <script>
+    $( document ).ready(function() 
+    {
         CKEDITOR.replace( 'isi' );
     });
+    
     </script>
+
 @endsection

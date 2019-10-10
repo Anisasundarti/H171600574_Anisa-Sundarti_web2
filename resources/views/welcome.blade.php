@@ -12,8 +12,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #FFB6C1;
-                color: #191970;
+                background-color: #2E8B57;
+                color: #FFFF00;
                 font-family: 'Nunito', sans-serif;
                 font-weight: bold ;
                 font-style: italic ;
@@ -50,7 +50,7 @@
             }
 
             .links > a {
-                color: #000000;
+                color: #ffffff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: bold ;
@@ -67,7 +67,7 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right  links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
@@ -82,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                -LARAVEL SUNDARTI-
+                LARAVEL ANISA SUNDARTI
                 </div>
 
                 <div class="links">

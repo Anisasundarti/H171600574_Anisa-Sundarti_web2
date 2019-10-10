@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center bg-primary" button class="btn btn-primary">{{ __('Login') }}</div>
+                <div class="card-header text-white text-center bg-success" button class="btn btn-success">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -58,7 +58,7 @@
 
                     <div class="captcha">
                         <span>{!! captcha_img() !!}</span>
-                            <button type="button" class="btn btn-success btn-refresh">Refresh</button>
+                            <button type="button" class="btn btn-danger text-white btn-refresh">Refresh</button>
                     </div>
                         <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
                          @if ($errors->has('captcha'))
@@ -67,25 +67,22 @@
                  <strong>{{ $errors->first('captcha') }}</strong>
                         </span>
                  @endif
+            </div>
         </div>
-</div>
-
-
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+        
+        <div class="form-group row mb-0">
+            <div class="col-md-8 offset-md-4">
+                <button type="submit" class="btn btn-success">
+                    {{ __('Login') }}
+                </button>
+                @if (Route::has('password.request'))
+                <a class="btn btn-link" href="{{ route('password.request') }}">
+                    {{ __('Forgot Your Password?') }}
+                </a>
+                @endif
+                </div>
+                </div>
+                </form>
                 </div>
             </div>
         </div>
